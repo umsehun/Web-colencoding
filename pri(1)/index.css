@@ -1,0 +1,210 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /*padding값과 margin값의 초기화*/
+    box-sizing: border-box;
+    /*box-sizing은 기본값이 contnet로 적용이 되있음 */
+    font-family: 'Raleway';
+    /*폰트 적용*/
+}
+/*전체 적용*/
+
+header{
+    position: absolute;
+    /*포지션 문서 흐름에서 제거*/
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    /*flex로 하여 비율을 일정하게*/
+    justify-content: space-between;
+    /* 플렉스 항목들을 축의 시작 부분에 정렬*/
+    align-items: center;
+    /*안에 있는 글자 중앙으로 정렬*/
+    /*justify https://developer.mozilla.org/ko/docs/Web/CSS/justify-content*/
+    z-index: 100;
+    /*Z축을 정렬 우선순위와 관련되어있음*/
+}
+
+.logo{
+    font-size: 2em;
+    /*1em = 16px -> 32px*/
+    color: #111010;
+    cursor: default;
+    /*커서를 일반으로 설정
+    여려가지 cusuor를 알려주는 사이트 https://developer.mozilla.org/ko/docs/Web/CSS/cursor*/
+    font-weight: 800;
+    /*폰트 굻기를 400으로 설정*/
+    padding-right: 14em;
+}
+
+.logo span{
+    color: purple;
+    font-weight: 600;
+}
+
+
+
+.navigation a {
+    text-align: center;
+    /*글자를 중앙으로 정렬*/
+    width: 200px;
+    height: auto;
+    background-color: rgb(158, 73, 158);
+    display: inline-block; /* 버튼들을 왼쪽으로 정렬하기 위해 inline-block으로 변경 */
+    line-height: 2em;
+    /*위에 있는 텍스트 줄 거리를 높임
+    단 px은 절대적 단위이니 px은 하지말자*/
+    font-size: 1.1em;
+    color: #050505;
+    text-decoration: none;
+    /*A태그의 밑줄을 제거*/
+    margin-right: 40px;
+    /*왼쪽으로 공백 40px
+    padding은 내부에 요소에 빈 공간을 만드는 것*/
+    font-weight: 500;
+    transition: .3s;
+    /*애니메이션 주기*/
+    border-radius: 20px;
+    /*20px만큼 둥글게 함*/
+
+    }
+
+
+
+
+.navigation a:hover/*hover 마우스 커서를 올리 떄*/{
+    color: #fff;
+}
+
+.btn-talk{
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 45px;
+    /*padding의 순서 상 우 하 좌 기억하자*/
+    background: purple;
+    /*배경을 보라색으로 설정*/
+    border: 2px solid purple;
+    /*2px의 보라핵 테두리를 적용*/
+    font-weight: 500;
+    transition: .3s;
+   float: right;
+   /*맨 오른쪽으로 고정*/
+}
+
+.btn-talk:hover/*hover 마우스 커서를 올릴 떄*/{
+    color: purple;
+    background: transparent;
+    /*배경을 없에는 코드
+    이와 비슷한 코드 ->background:none*/
+}
+
+.Home{
+    position: relative;
+    /*일반적인 문서흐름에 배치하지만
+    요소 자기 자신의 원래 위치(static일 때의 위치)를 기준으로 배치한다.*/
+    width: 100%;
+    height: 100vh;
+    background: url('/pri/다운로드.jpeg') no-repeat;
+    /*no-repeact-더 이상 반복하지 않겟다*/
+    background-size: cover;
+    /*배경을 덮음 한마디로 화면에 꽉 차게 적용*/
+    background-position: center;
+    /*배경을 화면을 중앙에 정렬*/
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.content{
+    max-width: 500px;
+    /*max-와 기본 요소의 차이
+    노션참고*/
+    color: #353333;
+}
+
+.content p{
+    color: #050505;
+    font-weight: 600;
+    /*폰트 굻기 설정*/
+}
+.content h2{
+    font-size: 2em;
+}
+
+.content h2 span{
+    color: purple;
+}
+
+.content h4{
+    font-size: 2em;
+}
+
+.content p{
+    padding: 10px 0px 40px 0px;
+}
+
+.btn-group a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: purple;
+    border-radius: 10px;
+    border: 2px solid purple;
+    font-weight: 500;
+    transition: .3s;
+    font-weight: 800;
+    display: inline;
+}
+
+.btn-group a:hover:nth-child(1)/*첫 번쨰의 요소 선택*/{
+    color: purple;
+    background: transparent;
+}
+
+
+.btn-group a:nth-child(2)/*두 번째 마다 선택*/{
+    color: purple;
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+
+}
+
+.btn-group a:hover:nth-child(2){
+    color: #fff;
+    background: purple;
+}
+
+
+.social-icons{
+    position: absolute;
+    bottom: 55px;
+
+}
+
+.social-icons a{
+    display: inline-block;
+    /*Dispaly의 값 정리
+    노션 참고*/
+    width: 35px;
+    height: 35px;
+    background: purple;
+    border-radius: 50%;
+    margin-right: 22px;
+    line-height: 35px;
+    border: 2px solid purple;
+    outline: 2px solid #fff;
+    transition: .3s;
+}
+
+.social-icons a:hover/*A태그에 커서가 닿을 떄*/{
+    transform: translateY(-5px);
+}
+
+.social-icons a i/*A태그와 I태그 전부 다 적용*/{
+    position: absolute;
+    color: #fff;
+    padding: 0px 8.1px;
+    padding-top: 10px;
+}

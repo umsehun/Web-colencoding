@@ -1,0 +1,62 @@
+html, body{
+    margin:0;
+    padding: 0;/*초기화*/
+}
+h1, p{
+    margin: 0;/*초괴화*/
+}
+a{
+    color:inherit;/*색 속성은 부모에게 받는다*/
+    text-decoration: none;/*a태그의 밑줄을 제거*/
+}
+
+main{
+    background: url(/Untitled.png);/*배경 속성*/
+    background-repeat:no-repeat;/*반복 암함*/
+    background-size: cover;/*요소의 이미지를 최대한 크게 보여줌*/
+    background-position: center center;/*세로 축의 중앙에 보여줌*/
+    width: 100vw;
+    height: 100vh;/*항상 꽉 차게 만듬*/
+    font-family: "Nanum Brush Script", cursive;/*상속이 되니 main태그에다가 넣음*/
+
+}
+#contents{
+    position: absolute;/*가장 가까운 위치에 있는 조상 요소를 기준으로 배치*/
+    top:50px;/*중앙에 오는 값을 정의*/
+    transform: translateY(-50%);/*세로 방향에서 중앙으로*/
+    width: 100%;
+    color:white;
+    text-align: center;/*가로 방향의 기준으로 중아에 오게 됨*/
+    
+
+}/*콘텐츠 속성으로 h1태그를 흰색으로 정의(inherit의 태그로 a태그의 색도 흰색이됨)*/
+#contents h1{
+    font-family: "Nanum Brush Script", cursive;/*h1태그의 글골 변경*/
+    font-size: 70px;/*h1폰트 사이즈를 70px로 정의*/
+    margin-bottom: 16px;/*아래로 16px의 간격이 생김*/
+}
+#contents p{
+    font-size: 23px;
+    margin-bottom: 16px;/*아래로 16px의 간격이 생김*/
+}
+@media(max-width:769px){
+    /*웹 사이트의 크가가 769px보다 작아질 경우 실행됨*/
+#contents a{
+    display: inline-block;
+    border:2px solid white;/*a태그에 직사각형이 생김*/
+    padding: 10px 20px;
+    border-radius: 20px;/*20px만큼 둥글게 만듬*/
+    font-size: 17px;
+    font-weight: bold;/*굵은 표시로 전환*/
+}
+    #contents h1{
+        font-size: 70px;
+        #contents p{
+            font-size: 20px;
+        }
+    }
+}
+#contents a{
+    font-size: 14px;
+}
+/*css code*/

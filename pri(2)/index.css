@@ -1,0 +1,163 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    /*중앙으로 정렬하기 위해 사용*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*중앙으로 정렬하기 위해 사용*/
+    min-height: 100vh;
+    background: rgb(20, 18, 18);
+}
+
+.login-box{
+    position: absolute;
+    /*absolute로 기존에 있던 위치 값 제거*/
+    width: 400px;
+}
+
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    /*아이템 값들을 가운데로 정렬*/
+    align-items: center;
+}
+
+.container span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #5a5050;
+    border-radius: 8px;
+    transform-origin: 128px;
+   transform: scale(2.2/*X,Y를  2만큼 확대*/) rotate(calc(var(--i) *
+   (360deg / 50)));
+   animation: animateBlink/*애니메이션 이름*/ 3s linear infinite/*애니메이션 길이를 3초로 두고 일정한 속도를 무한으로 돌림*/;
+   animation-delay: calc(var(--i) * (3s /50));
+   /*애니메이션 시작 시간을 3초를 50나눈 0.06초 값을 애니메이션에서 지연 시킴 */
+}
+
+@keyframes animateBlink{
+    0%/*0%일 떄*/{
+        background: rgb(111, 128, 129);
+    }
+
+    25%/*25%일 떄*/{
+        background: rgb(6, 222, 238);
+    }
+
+}
+
+.login-box form{
+    width: 100%;
+    padding: 0 50px;
+
+}
+
+h2{
+    font-size: 2em;
+    color: aqua;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    /*absolute를 하면 하나로 뭉치기 때문에 relativie로 */
+    margin: 25px 0px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    /**/
+    border: 2px solid rgb(37, 37, 73);
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px;
+    transition: .5s ease;
+}
+
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #0ef;
+}
+
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 1px;
+    font-size: .8em;
+    transition: .5s ease;
+    background: #1f1f1f;
+    padding: 0 6px;
+    color: #0ef; 
+}
+
+
+.forget-pass{
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.forget-pass a{
+    font-size: .85em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget-pass a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+   border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+}
+
+.signup-link{
+    margin: 20px 0px 10px;
+    text-align: center;
+}
+
+.signup-link a{
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 600;
+    color: #0ef;
+}
+
+
+.signup-link a:hover{
+    text-decoration: underline;
+}
+

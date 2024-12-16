@@ -1,0 +1,85 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.img-item
+{
+   top: 200px;
+    position: absolute;
+    justify-content: center;
+    z-index: 100px;
+    box-shadow: rgba(255, 255, 255, 1);
+     display: flex;
+    transform: rotate(90deg);
+    height: inherit;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 800px; 
+    left: 40%;
+    
+}
+
+.img-slider
+{
+
+    text-align: center;
+}
+
+.img-item-fruit
+{
+    position: absolute;
+    transform: rotate(90deg);
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 800px; 
+    left: 40%;
+
+}
+
+.img-slider >.text1 
+{
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.text1 h2
+{
+    position: relative;
+   margin-bottom: -8px;
+}
+
+.text1 >.text1 p
+{
+    position: relative;
+    text-align: center;
+    display: flex;
+
+}
+
+
+.img-item-frui1t1
+{
+    width: 1200px;
+    height: 1200px;
+    background-color: blue;
+}
+
+.next-ben
+{
+    position: relative;
+    border:2px solid black;
+    border-radius: 12%;
+}
+
+.prev
+{
+    position: relative;
+    border-radius: 12%
+}
+
+body
+{
+    background-color:green ;
+}
